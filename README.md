@@ -31,7 +31,7 @@ Then you can add the badge url to your profile in the following format:
 
 ## Preview
 
-![](https://makatime.kallydev.workers.dev/kallydev.svg)
+<img alt="kallydev" src="https://makatime.kallydev.workers.dev/kallydev.svg">
 
 ## License
 
