@@ -53,13 +53,14 @@ impl User {
 
         Ok(Response::builder()
             .with_headers({
-                let mut header_map = HeaderMap::new();
-                header_map.insert(
-                    header::CONTENT_TYPE,
-                    HeaderValue::from_static("image/svg+xml"),
-                );
-
-                header_map.into()
+                HeaderMap::from_iter([
+                    (
+                        header::CONTENT_TYPE,
+                        HeaderValue::from_static("image/svg+xml"),
+                    ),
+                    (header::CACHE_CONTROL, HeaderValue::from_static("no-cache")),
+                ])
+                .into()
             })
             .fixed(badge_builder.build().svg().into_bytes()))
     }
