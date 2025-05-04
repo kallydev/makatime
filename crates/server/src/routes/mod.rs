@@ -77,7 +77,7 @@ async fn authorization(request: &Request, route_context: &RouteContext<()>) -> R
             let mut request_init = RequestInit::default();
             request_init.with_headers({
                 let mut headers = Headers::default();
-                headers.set(header::USER_AGENT.as_str(), "Test")?;
+                headers.set(header::USER_AGENT.as_str(), "MakaTime")?;
 
                 let mut authorization_header_values = vec![];
                 authorization.encode(&mut authorization_header_values);
