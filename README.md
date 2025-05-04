@@ -16,8 +16,22 @@ A real-time service that tracks what GitHub users are currently doing.
 cargo install --git https://github.com/kallydev/makatime makatime-client
 
 # Start the client
-makatime-client --token "github_pat_<YOUR_GITHUB_PERSONAL_TOKEN>"
+makatime-client --token "github_pat_{YOUR_GITHUB_PERSONAL_TOKEN}"
 ```
+
+Then you can add the badge url to your profile in the following format:
+
+### Markdown
+
+`![](https://makatime.kallydev.workers.dev/{USERNAME}.svg)`
+
+### HTML
+
+`<img src="https://makatime.kallydev.workers.dev/{USERNAME}.svg">`
+
+## Preview
+
+![](https://makatime.kallydev.workers.dev/kallydev.svg)
 
 ## License
 
