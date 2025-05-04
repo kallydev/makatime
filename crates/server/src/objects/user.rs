@@ -58,7 +58,7 @@ impl User {
                         header::CONTENT_TYPE,
                         HeaderValue::from_static("image/svg+xml"),
                     ),
-                    (header::CACHE_CONTROL, HeaderValue::from_static("no-cache")),
+                    (header::CACHE_CONTROL, HeaderValue::from_static("max-age=0, no-cache, no-store, must-revalidate")),
                 ])
                 .into()
             })
