@@ -1,0 +1,17 @@
+name = "makatime"
+main = "build/worker/shim.mjs"
+compatibility_date = "2025-05-02"
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "61e804e1c66f4e078ed7af5abde8a287"
+
+[durable_objects]
+bindings = [{ name = "USER", class_name = "User" }]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["User"]
